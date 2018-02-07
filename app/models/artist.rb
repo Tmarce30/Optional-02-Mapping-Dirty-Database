@@ -3,7 +3,7 @@ class Artist < ActiveRecord::Base
   self.primary_key = "artist_code"
 
   has_many :albums, foreign_key: 'id_artist'
-  has_many :tracks
+  has_many :tracks, through: :albums
 
   validates :name, presence: true
 end
