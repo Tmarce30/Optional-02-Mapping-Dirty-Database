@@ -5,5 +5,5 @@ class Album < ActiveRecord::Base
   belongs_to :artist, foreign_key: 'id_artist'
 
   validates :title, presence: true
-  validates :id_artist, presence: true
+  validates :artist, presence: true
 end
